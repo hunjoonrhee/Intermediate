@@ -56,4 +56,74 @@ public class IntermediateTest {
         assertEquals("Nur zu einer einstelligen Zahl wird ein entsprechendes Zahlenwort ausgegeben!", actual);
 
     }
+
+    @Test
+    void zahlenTestforNull(){
+
+        // GIVEN
+        int n = 0;
+
+        // WHEN
+        String actual = Intermediate.zahlen(n);
+
+        // THEN
+        assertEquals("Falsche Eingabeparameter!", actual);
+
+    }
+
+    @Test
+    void zahlenTestforEins(){
+
+        // GIVEN
+        int n = 1;
+
+        // WHEN
+        String actual = Intermediate.zahlen(n);
+
+        // THEN
+        assertEquals("1", actual);
+
+    }
+
+    @Test
+    void zahlenTestforDrei(){
+
+        // GIVEN
+        int n = 3;
+
+        // WHEN
+        String actual = Intermediate.zahlen(n);
+
+        // THEN
+        assertEquals("#3", actual);
+
+    }
+
+    @Test
+    void zahlenTestforFünf(){
+
+        // GIVEN
+        int n = 5;
+
+        // WHEN
+        String actual = Intermediate.zahlen(n);
+
+        // THEN
+        assertEquals("$5", actual);
+
+    }
+
+    @Test
+    void zahlenTestforDreiUndFünf(){
+
+        // GIVEN
+        int n = 15;
+
+        // WHEN
+        String actual = Intermediate.zahlen(n);
+
+        // THEN
+        assertEquals("15", actual);
+
+    }
 }

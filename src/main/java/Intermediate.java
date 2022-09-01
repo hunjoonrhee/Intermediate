@@ -6,6 +6,10 @@ public class Intermediate {
             System.out.println(zahlenwort(i));
         }
 
+        for (int i = 0; i<=100; i++){
+            System.out.println(zahlen(i));
+        }
+
 
     }
     public static String zahlenwort(int number){
@@ -30,6 +34,24 @@ public class Intermediate {
                 result = Zahlenwörter[number-1];
             }else{
                 result = "Nur zu einer einstelligen Zahl wird ein entsprechendes Zahlenwort ausgegeben!";
+            }
+        }
+        return result;
+    }
+
+    public static String zahlen(int number){
+        String result = null;
+        if(number == 0){
+            result = "Falsche Eingabeparameter!";
+        }else{
+            if(number % 3 == 0 && number % 5 == 0){
+                result = String.valueOf(number);
+            } else if (number % 3 == 0) {
+                result = "#"+String.valueOf(number);
+            } else if (number % 5 == 0){
+                result = "$"+String.valueOf(number);
+            } else{
+                result = String.valueOf(number);
             }
         }
         return result;
