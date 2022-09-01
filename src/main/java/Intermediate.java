@@ -1,3 +1,7 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Intermediate {
     public static void main(String[] args) {
         int l = 0;
@@ -9,6 +13,19 @@ public class Intermediate {
         for (int i = 0; i<=100; i++){
             System.out.println(zahlen(i));
         }
+
+        int n = 0;
+        ArrayList<String> result = new ArrayList<>();
+        while(n<5){
+            Scanner scanner = new Scanner(System.in);
+            result.add(stringArray(scanner));
+            n++;
+        }
+        System.out.println("Eingegebene Wörter sind: ");
+        for(String r:result){
+            System.out.println(r);
+        }
+
 
 
     }
@@ -55,5 +72,15 @@ public class Intermediate {
             }
         }
         return result;
+    }
+
+    public static String stringArray(Scanner scanner){
+        System.out.println("Geben Sie ein String ein: ");
+        String wort = scanner.nextLine();
+        System.out.println("Eingegebenes String ist: " + wort);
+
+
+        return wort;
+
     }
 }
