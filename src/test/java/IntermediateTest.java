@@ -33,7 +33,7 @@ public class IntermediateTest {
     void zahlenwortTestforZwei(){
 
         // GIVEN
-        int n = 1;
+        int n = 2;
 
         // WHEN
         String actual = Intermediate.zahlenwort(n);
@@ -47,7 +47,7 @@ public class IntermediateTest {
     void zahlenwortTestforZehn(){
 
         // GIVEN
-        int n = 1;
+        int n = 10;
 
         // WHEN
         String actual = Intermediate.zahlenwort(n);
